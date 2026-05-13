@@ -1,0 +1,22 @@
+# Arquivos de log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Pasta de dependências
+# Nunca envie esta pasta para o repositório!
+node_modules
+
+# Pasta de build/distribuição
+dist
+dist-ssr
+
+# Arquivos de ambiente
+# Contêm chaves de API e outras informações sensíveis
+.env
+.env.local
+.env.*.local
+
+# Arquivos de configuração de IDEs
+.vscode/
+.idea/
