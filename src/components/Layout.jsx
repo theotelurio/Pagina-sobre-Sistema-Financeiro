@@ -18,7 +18,7 @@ export default function Layout() {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" onClick={() => setOpen(true)} sx={{ cursor: 'pointer' }}>
-            ☰ Meu Projeto (Abrir Menu)
+            ☰ Sistema Financeiro
           </Typography>
         </Toolbar>
       </AppBar>
