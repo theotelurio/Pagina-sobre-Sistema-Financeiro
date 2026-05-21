@@ -15,9 +15,9 @@ export default function Layout() {
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       {/* CABEÇALHO */}
-      <AppBar position="static">
+      <AppBar position="static" className="cabecalho">
         <Toolbar>
-          <Typography variant="h6" onClick={() => setOpen(true)} sx={{ cursor: 'pointer' }}>
+          <Typography variant="h5" sx={{  }} onClick={() => setOpen(true)}>
             ☰ Sistema Financeiro
           </Typography>
         </Toolbar>
@@ -25,10 +25,17 @@ export default function Layout() {
 
       {/* DRAWER (MENU LATERAL) */}
       <Drawer anchor="left" open={open} onClose={() => setOpen(false)}>
-        <Box sx={{ width: 250 }} onClick={() => setOpen(false)}>
+        <Box sx={{ width: 250}} onClick={() => setOpen(false)}>
           <List>
             {menuItems.map((item) => (
-              <ListItem button key={item.text} component={Link} to={item.path}>
+              <ListItem 
+              button key={item.text} 
+              component={Link} to={item.path} 
+              sx={{ 
+                  color: 'inherit', 
+                  textDecoration: 'none',
+                  '&:hover': { color: 'primary.main' },
+                }}>
                 <ListItemText primary={item.text} />
               </ListItem>
             ))}
@@ -42,8 +49,8 @@ export default function Layout() {
       </Box>
 
       {/* RODAPÉ */}
-      <Box component="footer" sx={{ p: 2, textAlign: 'center', bgcolor: '#f5f5f5' }}>
-        <Typography variant="body2">Data: 10/06 - Projeto Acadêmico</Typography>
+      <Box component="footer" sx={{ p: 2, textAlign: 'center', bgcolor: '#524666' }}>
+        <Typography variant="body2">© 2023 Sistema Financeiro - Todos os direitos reservados</Typography>
       </Box>
     </Box>
   );
