@@ -28,15 +28,14 @@ const WhatsappButton = ({ formData, disabled }) => {
     <Button
       variant="contained"
       color="success"
-      size="large"
+      size="merga"
       startIcon={<WhatsAppIcon />}
       onClick={handleClick}
       disabled={disabled}
-      sx={{ 
-        width: '100%', 
+      sx={{  
         backgroundColor: disabled ? 'action.disabledBackground' : '#25D366', 
         '&:hover': {
-          backgroundColor: '#1EBE57'
+          backgroundColor: '#1a8f43'
         }
       }}
     >
