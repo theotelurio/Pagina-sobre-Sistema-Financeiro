@@ -13,8 +13,7 @@ const WhatsappButton = ({ formData, disabled }) => {
       return;
     }
 
-    // Número de telefone do WhatsApp (exemplo: 5511999999999)
-    // Altere este número para o número de destino real da empresa/contato.
+
     const numeroWhatsApp = "5569993687236"; 
     
     const textoMensagem = `Olá! Meu nome é ${formData.nome}. \nMeu e-mail é: ${formData.email} \n\nMensagem: \n${formData.mensagem}`;

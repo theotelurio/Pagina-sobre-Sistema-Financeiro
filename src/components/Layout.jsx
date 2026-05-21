@@ -13,11 +13,11 @@ export default function Layout() {
   ];
 
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
       {/* CABEÇALHO */}
       <AppBar position="static" className="cabecalho">
         <Toolbar>
-          <Typography variant="h5" sx={{  }} onClick={() => setOpen(true)}>
+          <Typography variant="h6" onClick={() => setOpen(true)}>
             ☰ Sistema Financeiro
           </Typography>
         </Toolbar>
@@ -44,13 +44,13 @@ export default function Layout() {
       </Drawer>
 
       {/* CONTEÚDO DAS PÁGINAS */}
-      <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+      <Box component="main" sx={{ flexGrow: 1, }}>
         <Outlet />
       </Box>
 
       {/* RODAPÉ */}
-      <Box component="footer" sx={{ p: 2, textAlign: 'center', bgcolor: '#524666' }}>
-        <Typography variant="body2">© 2023 Sistema Financeiro - Todos os direitos reservados</Typography>
+      <Box component="footer" sx={{ p: 3, position: 'fixed-end' ,textAlign: 'center', bgcolor: '#524666' }}>
+        <Typography variant="body2">© 2026 Sistema Financeiro - Todos os direitos reservados</Typography>
       </Box>
     </Box>
   );
