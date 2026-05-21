@@ -41,14 +41,15 @@ const Form = () => {
 
   return (
     <Paper 
-      elevation={1}
+      elevation={12}
       component="form" 
       sx={{
         width: '100%',
         maxWidth: 900, 
         p: { xs: 3, sm: 3 }, 
-        borderRadius: 3,
-        border: '1px solid #ffffff',
+        border: '1px solid rgba(255, 255, 255, 0.1)',
+        backgroundColor: 'rgba(55, 45, 77, 0.8)', 
+        backdropFilter: 'blur(10px)',
     
       }}
     >
@@ -58,8 +59,7 @@ const Form = () => {
           component="h2" 
           align="center" 
           sx={{ 
-            fontWeight: 'bold', 
-            mb: 1 
+            fontWeight: 'bold',  
           }}
         >
           Envie-nos uma Mensagem
@@ -70,11 +70,10 @@ const Form = () => {
           name="nome"
           value={formData.nome}
           onChange={handleChange}
-          required
           variant="outlined"
           fullWidth
-          placeholder="Digite seu nome"
         />
+        
         
         <TextField
           label="E-mail"
