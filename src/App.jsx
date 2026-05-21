@@ -11,15 +11,16 @@ const darkTheme = createTheme({
   palette: {
     mode: 'dark',
     background: {
-      default: '#191426', // Fundo principal (--bg-base)
-      paper: '#372D4d',   // Fundo de cards/menus (--bg-surface)
+      default: '#191426', 
+      paper: '#372D4d',   
     },
-    divider: '#524666',   // Bordas e separadores (--ui-border)
+    divider: '#524666',   
     primary: {
-      main: "#706282",    // Detalhes e hovers (--ui-accent)
+      main: "#706282",
     },
     text: {
-      primary: '#F3F0F5', // Texto de alto contraste
+      primary: '#ffffff',
+      secondary: '#ffffff',
     },
   },
 });

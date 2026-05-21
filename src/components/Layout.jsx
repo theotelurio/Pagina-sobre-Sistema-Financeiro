@@ -17,7 +17,7 @@ export default function Layout() {
       {/* CABEÇALHO */}
       <AppBar position="static" className="cabecalho">
         <Toolbar>
-          <Typography variant="h6" textcolor="inherit" sx={{ flexGrow: 1 }} onClick={() => setOpen(true)}>
+          <Typography variant="h5" sx={{  }} onClick={() => setOpen(true)}>
             ☰ Sistema Financeiro
           </Typography>
         </Toolbar>
