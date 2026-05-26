@@ -6,7 +6,7 @@ const Contato = () => {
   return (
     <Box
       sx={{
-    	minHeight: '88vh',
+    	minHeight: '89vh',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',

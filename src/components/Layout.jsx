@@ -9,7 +9,7 @@ export default function Layout() {
     { text: 'Home', path: '/' },
     { text: 'Blog', path: '/blog' },
     { text: 'Fale Conosco', path: '/contato' },
-    { text: 'Função', path: '/conversor' },
+    { text: 'Conversor', path: '/conversor' },
   ];
 
   return (
