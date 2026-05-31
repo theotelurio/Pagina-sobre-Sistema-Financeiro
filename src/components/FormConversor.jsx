@@ -58,7 +58,18 @@ const FormConversor = () => {
         const response = await fetch('https://api.fxratesapi.com/currencies');
         const data = await response.json();
         
-        setMoedas(data);
+        // Define as moedas que você quer mostrar
+        const moedasDesejadas = ['USD', 'EUR', 'BRL', 'GBP', 'JPY', 'CAD', 'AUD', 'CHF', 'CNY', 'ARS'];
+        const moedasFiltradas = {};
+        
+        // Filtra o resultado da API para manter apenas as moedas desejadas
+        moedasDesejadas.forEach(codigo => {
+          if (data[codigo]) {
+            moedasFiltradas[codigo] = data[codigo];
+          }
+        });
+        
+        setMoedas(moedasFiltradas);
       } catch (erro) {
         console.error("Erro ao carregar moedas", erro);
       }
@@ -86,7 +97,7 @@ const FormConversor = () => {
           width: '100%',
           maxWidth: 500, 
           p: { xs: 4, sm: 5 }, 
-          border: '2px solid #29b6f6',
+          border: '2px solid transparent',
           backgroundColor: 'white', 
           borderRadius: 2
         }}
@@ -117,6 +128,19 @@ const FormConversor = () => {
                 displayEmpty
                 onChange={mudançaMoedaOri}
                 sx={{ color: moedaOrigem ? 'black' : 'rgba(0, 0, 0, 0.6)' }}
+                MenuProps={{
+                  anchorOrigin: {
+                    vertical: 'bottom',
+                    horizontal: 'left',
+                  },
+                  transformOrigin: {
+                    vertical: 'top',
+                    horizontal: 'left',
+                  },
+                  PaperProps: {
+                    sx: { mt: 1 },
+                  },
+                }}
               >
                 <MenuItem value="" disabled>Ex: dólar, euro ou real</MenuItem>
                 {Object.values(moedas).map((moeda) => (
@@ -152,6 +176,19 @@ const FormConversor = () => {
                 displayEmpty
                 onChange={mudançaMoedaDest}
                 sx={{ color: moedaDestino ? 'black' : 'rgba(0, 0, 0, 0.6)' }}
+                MenuProps={{
+                  anchorOrigin: {
+                    vertical: 'bottom',
+                    horizontal: 'left',
+                  },
+                  transformOrigin: {
+                    vertical: 'top',
+                    horizontal: 'left',
+                  },
+                  PaperProps: {
+                    sx: { mt: 1 },
+                  },
+                }}
               >
                 <MenuItem value="" disabled>Ex: dólar, euro ou real</MenuItem>
                 {Object.values(moedas).map((moeda) => (
